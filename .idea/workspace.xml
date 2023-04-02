@@ -5,22 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d109502-be99-46b4-9c00-5c4b9df76ac8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/CreditApplicationDecision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/CreditApplicationDecision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/CreditApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/CreditApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/DecisionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/DecisionType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/PersonScoringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/PersonScoringCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NrAx2AOyVi8CF0WeVHBMse6kOA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -33,9 +43,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Mikolaj/IdeaProjects/udemy_CreditApp/src/main/java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mikolaj\IdeaProjects\udemy_CreditApp\src\main\java" />
+      <recent name="C:\Users\Mikolaj\IdeaProjects\udemy_CreditApp\src\main\java\pl\mikolajpienkosz\udemycredit" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -44,8 +66,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680412071631</updated>
-      <workItem from="1680412072876" duration="2000" />
+      <workItem from="1680412072876" duration="562000" />
+      <workItem from="1680412645152" duration="30000" />
+      <workItem from="1680412683445" duration="2766000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

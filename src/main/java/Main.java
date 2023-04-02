@@ -1,15 +1,15 @@
 import client.ConsoleReader;
+import core.CreditApplicationDecision;
 import core.CreditApplicationService;
+import core.PersonScoringCalculator;
 import core.model.CreditApplication;
-import core.model.Person;
-import core.model.PersonalData;
 
 public class Main {
     public static void main(String[] args) {
-        CreditApplicationService service = new CreditApplicationService();
+        CreditApplicationService service = new CreditApplicationService(new PersonScoringCalculator());
         CreditApplication creditApplication = new ConsoleReader().readInputParameters();
 
-        String decision = service.getDecision(creditApplication);
-        System.out.println(decision);
+        CreditApplicationDecision decision = service.getDecision(creditApplication);
+        System.out.println(decision.getDecisionString());
     }
 }

@@ -6,18 +6,20 @@ import core.model.Person;
 import java.math.BigDecimal;
 
 public class CreditApplicationService {
-    public String getDecision(CreditApplication creditApplication) {
+    private final PersonScoringCalculator calculator;
+
+    public CreditApplicationService(PersonScoringCalculator calculator) {
+        this.calculator = calculator;
+    }
+
+    public CreditApplicationDecision getDecision(CreditApplication creditApplication) {
         Person person = creditApplication.getPerson();
-        PersonScoringCalculator calculator = new PersonScoringCalculator();
-        String decisionNegative = "Sorry " + person.getPersonalData().getName() + " " + person.getPersonalData().getLastName() + ", decision is negative";
-        String decisionPositive = "Congratulations  " + person.getPersonalData().getName() + " " + person.getPersonalData().getLastName() + ", decision is positive";
-        String decisionIndecisive = "Sorry  " + person.getPersonalData().getName() + " " + person.getPersonalData().getLastName() + ", bank requires additional documents. Our consultant will contact you.";
         int scoring = calculator.calculate(person);
 
         if (scoring < 300) {
-            return decisionNegative;
+            return new CreditApplicationDecision(DecisionType.NEGATIVE_RATING,person.getPersonalData(), null);
         } else if (scoring <= 400) {
-            return decisionIndecisive;
+            return new CreditApplicationDecision(DecisionType.CONTACT_REQUIRED,person.getPersonalData(), null);
         }
         double creditRate = person.getIncomePerFamilyMember() * 12 * creditApplication.getPurposeOfLoan().getPeriod();
         switch (creditApplication.getPurposeOfLoan().getLoanType()) {
@@ -29,10 +31,9 @@ public class CreditApplicationService {
         }
 
         if (creditRate >= creditApplication.getPurposeOfLoan().getAmount()) {
-            return decisionPositive;
+            return new CreditApplicationDecision(DecisionType.POSITIVE,person.getPersonalData(), creditRate);
         } else {
-            BigDecimal roundedCreditRate = new BigDecimal(creditRate).setScale(2);
-            return "Sorry " + person.getPersonalData().getName() + " " + person.getPersonalData().getLastName() + ", decision is negative, bank can only borrow you only " + roundedCreditRate + " PLN";
+            return new CreditApplicationDecision(DecisionType.NEGATIVE_SCORING,person.getPersonalData(), creditRate);
         }
 
 

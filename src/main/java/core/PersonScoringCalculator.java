@@ -1,7 +1,6 @@
 package core;
 
 import core.model.Person;
-import core.model.PersonalData;
 
 public class PersonScoringCalculator {
     public int calculate(Person person) {
